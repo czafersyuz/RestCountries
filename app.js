@@ -133,5 +133,5 @@ const renderCountry = (data, type = 'country') => {
     }
   };
   
-  viewCountry('Australia');
+  viewCountry('turkey');
   // console.log(globalData);
