@@ -21,6 +21,9 @@ const renderCountry = (data, type = 'country') => {
     const population = data.population;
     const languages = data.languages;
     const currencies = data.currencies;
+    
+    //2. yöntem tutulan yöntem
+    // const { region, population, capital, languages, currencies, name:{ common: countryName }, flags: {svg: flag} } = data;
   
     const countryHtmlCard = `
         <img src="${flag}" class="card-img-top border border-secondary" alt="Flag" />
@@ -96,6 +99,9 @@ const renderCountry = (data, type = 'country') => {
     errorHtml.classList.add('alert', 'alert-danger', 'alert-container');
     errorHtml.innerText = msg;
     inputContainer.insertAdjacentElement('beforeend', errorHtml);
+    setTimeout(()=>{
+      errorHtml.remove();
+    },3000)
   };
   
   const viewCountry = async (countryName) => {
